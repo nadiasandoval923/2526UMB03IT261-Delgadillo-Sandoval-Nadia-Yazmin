@@ -8,3 +8,5 @@ a:active { color: yellow;}
 
 a:first-child { color: orange;}
 
+li:last-child { color: purple;}
+
