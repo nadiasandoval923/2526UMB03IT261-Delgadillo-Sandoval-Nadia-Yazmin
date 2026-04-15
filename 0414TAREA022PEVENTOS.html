@@ -1,0 +1,109 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Eventos en JS</title>
+</head>
+<body>
+
+<h2>Ejemplos de Eventos</h2>
+
+<!-- 1. Click -->
+<button id="btnClick">Click</button>
+
+<!-- 2. Doble click -->
+<button id="btnDblClick">Doble Click</button>
+
+<!-- 3. Mouse over -->
+<div id="caja" style="width:100px;height:100px;background:lightblue;">
+  Pasa el mouse
+</div>
+
+<!-- 4. Mouse out -->
+<div id="caja2" style="width:100px;height:100px;background:lightcoral;">
+  Sal del mouse
+</div>
+
+<!-- 5. Keydown -->
+<input type="text" id="teclado" placeholder="Escribe algo">
+
+<!-- 6. Keyup -->
+<input type="text" id="teclado2" placeholder="Suelta tecla">
+
+<!-- 7. Change -->
+<select id="select">
+  <option value="">Selecciona</option>
+  <option value="1">Opción 1</option>
+  <option value="2">Opción 2</option>
+</select>
+
+<!-- 8. Submit -->
+<form id="form">
+  <input type="text" placeholder="Nombre">
+  <button type="submit">Enviar</button>
+</form>
+
+<!-- 9. Load -->
+<img src="https://via.placeholder.com/100" id="imagen">
+
+<!-- 10. Scroll -->
+<div style="height:1000px;">
+  Baja para hacer scroll
+</div>
+
+<script>
+
+// 1. Click
+document.getElementById("btnClick").onclick = function() {
+  console.log("Click realizado");
+};
+
+// 2. Doble click
+document.getElementById("btnDblClick").ondblclick = function() {
+  console.log("Doble click");
+};
+
+// 3. Mouse over
+document.getElementById("caja").onmouseover = function() {
+  console.log("Mouse encima");
+};
+
+// 4. Mouse out
+document.getElementById("caja2").onmouseout = function() {
+  console.log("Mouse salió");
+};
+
+// 5. Keydown
+document.getElementById("teclado").onkeydown = function(e) {
+  console.log("Tecla presionada:", e.key);
+};
+
+// 6. Keyup
+document.getElementById("teclado2").onkeyup = function(e) {
+  console.log("Tecla soltada:", e.key);
+};
+
+// 7. Change
+document.getElementById("select").onchange = function() {
+  console.log("Seleccion cambió");
+};
+
+// 8. Submit
+document.getElementById("form").onsubmit = function(e) {
+  e.preventDefault();
+  console.log("Formulario enviado");
+};
+
+// 9. Load
+document.getElementById("imagen").onload = function() {
+  console.log("Imagen cargada");
+};
+
+// 10. Scroll
+window.onscroll = function() {
+  console.log("Haciendo scroll");
+};
+
+</script>
+
+</body>
+</html>
