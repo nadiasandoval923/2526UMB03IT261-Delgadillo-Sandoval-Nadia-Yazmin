@@ -1,0 +1,41 @@
+// ===== EJEMPLOS DE EXPRESIONES REGULARES =====
+
+// 1. Solo letras
+const soloLetras = /^[a-zA-Z]+$/;
+console.log("1. Solo letras:", soloLetras.test("Hola"));
+
+// 2. Solo números
+const soloNumeros = /^[0-9]+$/;
+console.log("2. Solo números:", soloNumeros.test("12345"));
+
+// 3. Correo electrónico
+const correo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+console.log("3. Correo:", correo.test("correo@gmail.com"));
+
+// 4. Número telefónico (10 dígitos)
+const telefono = /^\d{10}$/;
+console.log("4. Teléfono:", telefono.test("5512345678"));
+
+// 5. Fecha (YYYY-MM-DD)
+const fecha = /^\d{4}-\d{2}-\d{2}$/;
+console.log("5. Fecha:", fecha.test("2026-04-15"));
+
+// 6. Contraseña mínimo 8 caracteres
+const password = /^.{8,}$/;
+console.log("6. Contraseña:", password.test("12345678"));
+
+// 7. Sin espacios
+const sinEspacios = /^\S+$/;
+console.log("7. Sin espacios:", sinEspacios.test("HolaMundo"));
+
+// 8. Número decimal
+const decimal = /^\d+(\.\d+)?$/;
+console.log("8. Decimal:", decimal.test("12.5"));
+
+// 9. Código postal (5 dígitos)
+const codigoPostal = /^\d{5}$/;
+console.log("9. Código postal:", codigoPostal.test("12345"));
+
+// 10. Empieza con mayúscula
+const mayuscula = /^[A-Z][a-z]+$/;
+console.log("10. Inicial mayúscula:", mayuscula.test("Hola"));
