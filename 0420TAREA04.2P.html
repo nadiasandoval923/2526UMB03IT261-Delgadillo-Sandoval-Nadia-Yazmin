@@ -1,0 +1,158 @@
+[11:44 a.m., 21/4/2026] .: <html lang="es" ng-app="miApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title> TAREA AngularJS</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <style>
+        body {
+            background-color: #EDE7F6; 
+        }
+
+        .caja {
+            background-color: white;
+            border: 2px solid #B39DDB;
+        }
+
+        .btn-lila {
+            background-color: #B39DDB;
+            color: white;
+        }
+
+        .btn-lila:hover {
+            background-color: #9575CD;
+        }
+
+        h3 {
+            c…
+[11:54 a.m., 21/4/2026] .: <!DOCTYPE html>
+<html lang="es" ng-app="miApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Angular JS SVL</title>
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <style>
+        body {
+            background-color: #F3E5F5; 
+        }
+
+        .caja {
+            background-color: white;
+            border: 3px solid #CE93D8; 
+        }
+
+        h3 {
+            color: #AD1457; 
+        }
+
+        label {
+            color: #8E24AA; 
+            font-weight: bold;
+        }
+
+        .btn-lila {
+            background-color: #BA68C8; 
+            color: white;
+        }
+
+        .btn-lila:hover {
+            background-color: #AB47BC;
+        }
+
+        .btn-rosa {
+            background-color: #F06292; 
+            color: white;
+        }
+
+        .btn-rosa:hover {
+            background-color: #EC407A;
+        }
+
+        .resultado {
+            background-color: #FCE4EC; 
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body ng-controller="miControlador">
+
+    <div class="container mt-5">
+        <div class="p-4 rounded caja">
+
+            <h3 class="text-center">Angular JS SVL</h3>
+
+            <p class="text-center">BIENVENID@</p>
+
+            
+            <label>Escribe tu nombre:</label>
+            <input type="text" class="form-control" ng-model="nombre">
+
+            
+            <label class="mt-3">Selecciona tu color favorito:</label>
+            <select class="form-select" ng-model="color">
+                <option value="">Selecciona</option>
+                <option>Lila</option>
+                <option>Rosa</option>
+                <option>Morado</option>
+            </select>
+
+            
+            <div class="mt-3 resultado">
+                <p>Hola: {{nombre}}</p>
+                <p>Color favorito: {{color}}</p>
+                <p>Fecha: {{fecha}}</p>
+                <p>Clicks: {{contador}}</p>
+            </div>
+
+            
+            <button class="btn btn-lila mt-3" ng-click="saludar()">Saludar</button>
+            <button class="btn btn-rosa mt-3" ng-click="limpiar()">Limpiar</button>
+
+        </div>
+    </div>
+
+    <script>
+        var app = angular.module("miApp", []);
+
+        app.controller("miControlador", function($scope) {
+
+            $scope.nombre = "";
+            $scope.color = "";
+            $scope.contador = 0;
+            $scope.fecha = new Date();
+
+            $scope.saludar = function() {
+                if ($scope.nombre == "") {
+                    alert("Escribe tu nombre");
+                } else {
+                    $scope.contador++;
+                    alert("Hola " + $scope.nombre);
+                }
+            };
+
+            $scope.limpiar = function() {
+                $scope.nombre = "";
+                $scope.color = "";
+            };
+
+        });
+    </script>
+
+</body>
+
+</html>
