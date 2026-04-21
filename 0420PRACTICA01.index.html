@@ -1,0 +1,150 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Práctica JavaScript NYSVL</title>
+
+  <style>
+    body {
+      background-color: #E6D5F7;
+      font-family: Arial;
+      text-align: center;
+    }
+
+    button {
+      background-color: #B57EDC;
+      color: white;
+      padding: 10px;
+      margin: 5px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="titulo">Práctica JavaScript NYSVL</h1>
+
+  <button onclick="mostrarMensaje()">1. Mostrar mensaje</button>
+  <button onclick="mostrarVariable()">2. Variable</button>
+  <button onclick="sumar()">3. Suma</button>
+  <button onclick="condicion()">5. Mayor a 10</button>
+  <button onclick="parImpar()">6. Par o impar</button>
+  <button onclick="cicloFor()">7. For</button>
+  <button onclick="cicloWhile()">8. While</button>
+  <button onclick="miFuncion()">9. Función</button>
+  <button onclick="sumarFuncion(5,3)">10. Función suma</button>
+  <button onclick="arreglo()">11. Arreglo</button>
+  <button onclick="recorrerArreglo()">12. Recorrer arreglo</button>
+  <button onclick="mostrarObjeto()">13-14. Objeto libro</button>
+  <button onclick="cambiarTexto()">16. Cambiar texto</button>
+  <button onclick="cambiarColor()">17. Cambiar color</button>
+  <button onclick="validarCampo()">18. Validar input</button>
+  <button onclick="contador()">19. Contador</button>
+
+  <br><br>
+
+  <input type="text" id="campo" placeholder="Escribe algo">
+  <p id="contador">0</p>
+
+  <script>
+
+  function mostrarMensaje() {
+    alert("Hola mundo");
+  }
+
+  function mostrarVariable() {
+    let nombre = "Nadia";
+    console.log(nombre);
+  }
+
+  function sumar() {
+    let a = 5;
+    let b = 3;
+    console.log(a + b);
+  }
+
+  function condicion() {
+    let num = 15;
+    if (num > 10) {
+      console.log("Es mayor a 10");
+    }
+  }
+
+  function parImpar() {
+    let num = 4;
+    if (num % 2 === 0) {
+      console.log("Es par");
+    } else {
+      console.log("Es impar");
+    }
+  }
+
+  function cicloFor() {
+    for (let i = 1; i <= 10; i++) {
+      console.log(i);
+    }
+  }
+
+  function cicloWhile() {
+    let i = 10;
+    while (i >= 1) {
+      console.log(i);
+      i--;
+    }
+  }
+
+  function miFuncion() {
+    console.log("Hola desde una función");
+  }
+
+  function sumarFuncion(a, b) {
+    console.log(a + b);
+  }
+
+  function arreglo() {
+    let numeros = [1,2,3,4,5];
+    console.log(numeros[0]);
+  }
+
+  function recorrerArreglo() {
+    let numeros = [1,2,3,4,5];
+    numeros.forEach(n => console.log(n));
+  }
+
+  function mostrarObjeto() {
+    let libro = {
+      titulo: "El principito",
+      autor: "Antoine de Saint-Exupéry",
+      paginas: 120
+    };
+    console.log(libro);
+    console.log(libro.titulo);
+  }
+
+  function cambiarTexto() {
+    document.getElementById("titulo").innerText = "Texto cambiado";
+  }
+
+  function cambiarColor() {
+    document.getElementById("titulo").style.color = "purple";
+  }
+
+  function validarCampo() {
+    let valor = document.getElementById("campo").value;
+    if (valor === "") {
+      alert("Campo vacío");
+    } else {
+      alert("Correcto");
+    }
+  }
+
+  let cont = 0;
+  function contador() {
+    cont++;
+    document.getElementById("contador").innerText = cont;
+  }
+
+  </script>
+
+</body>
+</html>
