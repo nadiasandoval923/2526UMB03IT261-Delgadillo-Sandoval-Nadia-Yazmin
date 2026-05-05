@@ -1,0 +1,84 @@
+angular.module('app').controller('Index', Index);
+
+Index.$inject = ['$scope', '$log'];
+
+function Index($scope, $log) {
+
+    $scope.formConsultaRuta = {
+        fechaInicio: '',
+        fechaFin: '',
+        idProveedor: '',
+        idAutomovil: '',
+        idDriver: '',
+        idRuta: '',
+    }
+
+    $scope.imprimirMensaje = () => {
+        console.log($scope.formConsultaRuta);
+    }
+    
+    $scope.optionEjemplo = {
+        etiqueta : 'chevy',
+        valor : 69
+    }
+
+    $scope.optionsAutos =[
+    {
+    etiqueta: 'Chevy',
+    valor: 1
+    },
+     {
+    etiqueta: 'Tornado',
+    valor: 2
+    },
+     {
+    etiqueta: 'Camaro',
+    valor: 3
+    },
+     {
+    etiqueta: 'Suburban',
+    valor: 4
+    }
+    ];
+
+
+    $scope.optionDriver = [
+      {
+    etiqueta: 'uno',
+    valor: 1
+    },
+     {
+    etiqueta: 'dos',
+    valor: 2
+    },
+     {
+    etiqueta: 'tres',
+    valor: 3
+    },
+     {
+    etiqueta: 'cuatro',
+    valor: 4
+    }  
+    ];
+
+    $scope.optionProveedor =[
+  {
+    etiqueta: 'uno',
+    valor: 1
+    },
+     {
+    etiqueta: 'dos',
+    valor: 2
+    },
+     {
+    etiqueta: 'tres',
+    valor: 3
+    },
+     {
+    etiqueta: 'cuatro',
+    valor: 4
+    }  
+    ]
+    
+
+}
